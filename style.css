@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:wght@100&family=Source+Sans+Pro:wght@300&display=swap');
+
+body {
+  font-family: 'Neucha', cursive;
+  font-weight: 500;
+  height: 100%;
+  color: #424949;
+  background-color: #ECF0F1;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.group {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.group#group2 {
+  background-color: #486D88;
+}
+
+button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+}
+button:focus {
+  outline: none;
+}
+
+input[type=checkbox] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  opacity: 0;
+}
+input[type=checkbox]:focus {
+  outline: none;
+}
+
+button span {
+  display: block;
+  pointer-events: none;
+}
+button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+}
+button:focus {
+  outline: none;
+}
+
+input[type=checkbox] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  opacity: 0;
+}
+input[type=checkbox]:focus {
+  outline: none;
+}
+
+button span {
+  display: block;
+  pointer-events: none;
+}
+
+#toggler_2-1 span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+#toggler_2-1 span, #toggler_2-1 span::before, #toggler_2-1 span::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 9px;
+}
+#toggler_2-1 span::before, #toggler_2-1 span::after {
+  content: "";
+  display: block;
+}
+#toggler_2-1 span::before {
+  top: -18px;
+}
+#toggler_2-1 span::after {
+  bottom: -18px;
+}
+#toggler_2-1 span.one, #toggler_2-1 span.one::before, #toggler_2-1 span.one::after {
+  opacity: 1;
+  background-color: #708EA4;
+  transition: opacity 700ms ease 700ms;
+}
+#toggler_2-1 span + .two {
+  background-color: transparent;
+}
+#toggler_2-1 span + .two, #toggler_2-1 span + .two::before, #toggler_2-1 span + .two::after {
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+#toggler_2-1 span + .two::before, #toggler_2-1 span + .two::after {
+  background-color: #708EA4;
+}
+#toggler_2-1 span + .two::before {
+  transform-origin: top left;
+  transform: translateY(-2px) translateX(12px) rotateZ(45deg);
+}
+#toggler_2-1 span + .two::after {
+  transform-origin: bottom left;
+  transform: translateY(2px) translateX(12px) rotateZ(-45deg);
+}
+#toggler_2-1 input:checked + span.one, #toggler_2-1 input:checked + span.one::before, #toggler_2-1 input:checked + span.one::after {
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+#toggler_2-1 input:checked + span + .two, #toggler_2-1 input:checked + span + .two::before, #toggler_2-1 input:checked + span + .two::after {
+  opacity: 1;
+  transition: opacity 700ms ease 700ms;
+}
+
+#toggler_2-2 span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+#toggler_2-2 span, #toggler_2-2 span::before, #toggler_2-2 span::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 9px;
+}
+#toggler_2-2 span::before, #toggler_2-2 span::after {
+  content: "";
+  display: block;
+}
+#toggler_2-2 span.one {
+  opacity: 1;
+  transition: opacity 0ms 350ms;
+}
+#toggler_2-2 span.one, #toggler_2-2 span.one::before, #toggler_2-2 span.one::after {
+  background-color: #708EA4;
+}
+#toggler_2-2 span.one::before, #toggler_2-2 span.one::after {
+  transition: transform 350ms ease 350ms;
+}
+#toggler_2-2 span.one::before {
+  top: -18px;
+}
+#toggler_2-2 span.one::after {
+  bottom: -18px;
+}
+#toggler_2-2 span + .two {
+  background-color: transparent;
+}
+#toggler_2-2 span + .two::before, #toggler_2-2 span + .two::after {
+  background-color: #708EA4;
+  transition: transform 350ms ease;
+}
+#toggler_2-2 input:checked + span.one {
+  opacity: 0;
+}
+#toggler_2-2 input:checked + span.one::before, #toggler_2-2 input:checked + span.one::after {
+  transition: transform 350ms ease;
+}
+#toggler_2-2 input:checked + span.one::before {
+  transform: translateY(18px);
+}
+#toggler_2-2 input:checked + span.one::after {
+  transform: translateY(-18px);
+}
+#toggler_2-2 input:checked + span + .two::before, #toggler_2-2 input:checked + span + .two::after {
+  transition: transform 350ms ease 350ms;
+}
+#toggler_2-2 input:checked + span + .two::before {
+  transform: rotateZ(45deg);
+}
+#toggler_2-2 input:checked + span + .two::after {
+  transform: rotateZ(-45deg);
+}
+
+#toggler_2-3 span {
+  top: 50%;
+}
+#toggler_2-3 span, #toggler_2-3 span::before, #toggler_2-3 span::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 9px;
+  transition: transform 350ms ease, opacity 350ms ease;
+}
+#toggler_2-3 span::before, #toggler_2-3 span::after {
+  content: "";
+  display: block;
+}
+#toggler_2-3 span.one {
+  transform: translateY(-50%);
+}
+#toggler_2-3 span.one, #toggler_2-3 span.one::before, #toggler_2-3 span.one::after {
+  opacity: 1;
+  background-color: #708EA4;
+}
+#toggler_2-3 span.one::before, #toggler_2-3 span.one::after {
+  transform: translateX(0);
+}
+#toggler_2-3 span.one::before {
+  top: -18px;
+}
+#toggler_2-3 span.one::after {
+  bottom: -18px;
+}
+#toggler_2-3 span + .two {
+  opacity: 0;
+  background-color: transparent;
+}
+#toggler_2-3 span + .two::before, #toggler_2-3 span + .two::after {
+  background-color: #708EA4;
+}
+#toggler_2-3 span + .two::before {
+  transform: rotateZ(-45deg) translateX(100%);
+}
+#toggler_2-3 span + .two::after {
+  transform: rotateZ(45deg) translateX(100%);
+}
+#toggler_2-3 input:checked + span.one {
+  transform: translateX(100%) translateY(-50%);
+}
+#toggler_2-3 input:checked + span.one, #toggler_2-3 input:checked + span.one::before, #toggler_2-3 input:checked + span.one::after {
+  opacity: 0;
+}
+#toggler_2-3 input:checked + span.one::before, #toggler_2-3 input:checked + span.one::after {
+  transform: translateX(-200%);
+}
+#toggler_2-3 input:checked + span + .two {
+  opacity: 1;
+}
+#toggler_2-3 input:checked + span + .two::before {
+  transform: rotateZ(-45deg) translateX(0);
+}
+#toggler_2-3 input:checked + span + .two::after {
+  transform: rotateZ(45deg) translateX(0);
+}
+
+#toggler_2-4 span {
+  top: 50%;
+}
+#toggler_2-4 span, #toggler_2-4 span::before, #toggler_2-4 span::after {
+  position: absolute;
+}
+#toggler_2-4 span::before, #toggler_2-4 span::after {
+  content: "";
+  display: block;
+}
+#toggler_2-4 span.one {
+  height: 9px;
+  transform: translateX(0) translateY(-50%);
+  transition: width 350ms ease, transform 350ms ease;
+}
+#toggler_2-4 span.one, #toggler_2-4 span.one::before, #toggler_2-4 span.one::after {
+  left: 0;
+  width: 100%;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+}
+#toggler_2-4 span.one::before, #toggler_2-4 span.one::after {
+  height: 0;
+  transition: border-width 350ms ease;
+}
+#toggler_2-4 span.one::before {
+  top: -18px;
+  border-top: 9px solid #708EA4;
+}
+#toggler_2-4 span.one::after {
+  top: 18px;
+  border-bottom: 9px solid #708EA4;
+}
+#toggler_2-4 span + .two {
+  width: 100%;
+  height: 9px;
+  left: 0;
+  transform: translateY(-50%);
+  transition: width 350ms ease, height 350ms ease;
+}
+#toggler_2-4 span + .two::before, #toggler_2-4 span + .two::after {
+  top: 0;
+  width: 30px;
+  height: 9px;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: translateX(0) translateY(0);
+  transition: border-width 350ms ease, transform 350ms ease;
+}
+#toggler_2-4 span + .two::before {
+  left: 0;
+  border-left: 30px solid #708EA4;
+}
+#toggler_2-4 span + .two::after {
+  right: 0;
+  border-right: 30px solid #708EA4;
+}
+#toggler_2-4 input:checked + span.one {
+  width: 0;
+  transform: translateX(11px) translateY(-9px);
+}
+#toggler_2-4 input:checked + span.one::before, #toggler_2-4 input:checked + span.one::after {
+  border-width: 19px;
+}
+#toggler_2-4 input:checked + span + .two::before, #toggler_2-4 input:checked + span + .two::after {
+  width: 0;
+  height: 0;
+  border-width: 19px;
+}
+#toggler_2-4 input:checked + span + .two::before {
+  transform: translateX(2px) translateY(-14px);
+}
+#toggler_2-4 input:checked + span + .two::after {
+  transform: translateX(-2px) translateY(-14px);
+}
+
+.toggler {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.toggler[id^=toggler_2] {
+  background-color: #032137;
+}
+.toggler::after {
+  content: attr(id);
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  font-size: 12px;
+  font-family: monospace;
+}
